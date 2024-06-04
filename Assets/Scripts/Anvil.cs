@@ -6,6 +6,8 @@ using UnityEngine;
 public class Anvil : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject cube;
+
     void Start()
     {
         
@@ -24,6 +26,18 @@ public class Anvil : MonoBehaviour
         {
 
             Destroy(gameObject);
+            //print(RandomSpawner.item);
+
+            int a = Random.Range(0,101);
+            RandomSpawner.number = a;
+            //if number aligns, spawn item and change boolean
+
+            if (RandomSpawner.item == false && a == 50)
+            {
+
+                Instantiate(cube, transform.position, Quaternion.identity);
+
+            }
 
         }
 
