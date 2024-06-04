@@ -17,7 +17,7 @@ public class PlayerControler : MonoBehaviour
     public int winScore;
 
     public GameObject winText;
-    // Start is called before the first frame update
+
     void Start()
     {
         
