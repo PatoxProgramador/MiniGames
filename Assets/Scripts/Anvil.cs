@@ -30,7 +30,6 @@ public class Anvil : MonoBehaviour
 
             int a = Random.Range(0,101);
             RandomSpawner.number = a;
-            //if number aligns, spawn item and change boolean
 
             if (RandomSpawner.item == false && a == 50)
             {

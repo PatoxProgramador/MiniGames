@@ -16,7 +16,9 @@ public class PlayerControler : MonoBehaviour
     int score;
     public int winScore;
 
-    public GameObject winText;
+    //public GameObject winText;
+
+    public Transform respawn;
 
     void Start()
     {
@@ -37,7 +39,7 @@ public class PlayerControler : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
 
         }
-        
+
     }
 
     private void FixedUpdate()
@@ -63,9 +65,20 @@ public class PlayerControler : MonoBehaviour
             if (score >= winScore)
             {
 
-                winText.SetActive(true);
+                //winText.SetActive(true);
 
             }
+
+        }
+
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+       
+        if(collision.gameObject.tag == "Anvil")
+        {
+
+            transform.position = respawn.position;
 
         }
 
