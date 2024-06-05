@@ -16,7 +16,7 @@ public class PlayerControler : MonoBehaviour
     int score;
     public int winScore;
 
-    //public GameObject winText;
+    public GameObject winText;
 
     public Transform respawn;
 
@@ -65,7 +65,7 @@ public class PlayerControler : MonoBehaviour
             if (score >= winScore)
             {
 
-                //winText.SetActive(true);
+                winText.SetActive(true);
 
             }
 

@@ -382,32 +382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1422468095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4980975251058058379, guid: f040c2ee8a2aba048a4fe0710ed34130, type: 3}
-  m_PrefabInstance: {fileID: 1427715383}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1422468100
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422468095}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 10, y: 0.7090421, z: 10}
-  m_Center: {x: 0, y: -0.35512352, z: 0}
 --- !u!1001 &1427715383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460,17 +434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorP
       objectReference: {fileID: 0}
-    - target: {fileID: 4980975251058058379, guid: f040c2ee8a2aba048a4fe0710ed34130, type: 3}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4980975251058058379, guid: f040c2ee8a2aba048a4fe0710ed34130, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1422468100}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f040c2ee8a2aba048a4fe0710ed34130, type: 3}
 --- !u!1 &1433430333
 GameObject:
