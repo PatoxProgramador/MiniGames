@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,15 +9,20 @@ public class Anvil : MonoBehaviour
     // Start is called before the first frame update
     public GameObject cube;
 
+    Vector3 pos;
+
     void Start()
     {
+
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,7 +40,11 @@ public class Anvil : MonoBehaviour
             if (RandomSpawner.item == false && a == 50)
             {
 
-                Instantiate(cube, transform.position, Quaternion.identity);
+                pos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+
+                Instantiate(cube, pos, Quaternion.identity);
+                cube = GameObject.FindWithTag("Coin");
+                cube.transform.eulerAngles = new Vector3(90,0,0);
 
             }
 
