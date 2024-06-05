@@ -40,6 +40,8 @@ public class Anvil : MonoBehaviour
             if (RandomSpawner.item == false && a == 50)
             {
 
+                RandomSpawner.item = true;
+
                 pos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
 
                 Instantiate(cube, pos, Quaternion.identity);

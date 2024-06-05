@@ -7,6 +7,7 @@ public class RandomSpawner : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject cube;
+    public int height;
 
     [SerializeField] private float spawnRate = 1f;
 
@@ -27,24 +28,6 @@ public class RandomSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-25,26),5,Random.Range(-25,26));
-
-            Instantiate(cube,randomSpawnPosition,Quaternion.identity);
-
-        }
-        */
-
-        if (number == 50)
-        {
-
-            item = true;
-
-        }
         
     }
 
@@ -58,7 +41,7 @@ public class RandomSpawner : MonoBehaviour
 
             yield return wait;
 
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-25, 26), 5, Random.Range(-25, 26));
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-25, 26), height, Random.Range(-25, 26));
 
             Instantiate(cube, randomSpawnPosition, Quaternion.identity);
 
