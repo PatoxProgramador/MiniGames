@@ -20,7 +20,7 @@ public class CoinScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        //rotation of coin
         transform.Rotate(0, 0, rotateSpeed);
         
     }

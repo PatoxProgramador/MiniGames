@@ -18,7 +18,7 @@ public class QuitGame : MonoBehaviour
 
     public void Scadoosh()
     {
-
+        //quit game
         Application.Quit();
 
     }

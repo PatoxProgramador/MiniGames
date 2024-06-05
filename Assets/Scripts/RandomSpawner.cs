@@ -33,14 +33,14 @@ public class RandomSpawner : MonoBehaviour
 
     private IEnumerator Spawner()
     {
-
+        //anvil spawn rate
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
 
         while (spawning)
         {
 
             yield return wait;
-
+            //position where anvil spawn
             Vector3 randomSpawnPosition = new Vector3(Random.Range(-25, 26), height, Random.Range(-25, 26));
 
             Instantiate(cube, randomSpawnPosition, Quaternion.identity);

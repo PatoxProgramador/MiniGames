@@ -20,7 +20,7 @@ public class CameraConto : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        //camera rotation towards player
         transform.LookAt(target);
 
     }

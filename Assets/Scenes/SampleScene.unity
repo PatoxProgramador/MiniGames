@@ -926,6 +926,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 421933062265696643, guid: 5b9c9833c8bccdc4eb1f847320360a54, type: 3}
+      propertyPath: initial
+      value: 
+      objectReference: {fileID: 2008945551}
+    - target: {fileID: 421933062265696643, guid: 5b9c9833c8bccdc4eb1f847320360a54, type: 3}
       propertyPath: respawn
       value: 
       objectReference: {fileID: 1855824293}

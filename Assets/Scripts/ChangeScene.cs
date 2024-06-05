@@ -19,7 +19,7 @@ public class ChangeScene : MonoBehaviour
 
     public void Scene(string scene)
     {
-
+        //change of determined scene when button clicked
         SceneManager.LoadScene(scene);
 
     }

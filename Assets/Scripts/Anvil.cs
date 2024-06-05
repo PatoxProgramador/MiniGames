@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Anvil : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     public GameObject cube;
 
     Vector3 pos;
@@ -33,17 +33,17 @@ public class Anvil : MonoBehaviour
 
             Destroy(gameObject);
             //print(RandomSpawner.item);
-
+            //random number being generated to pass to public variable between the chances of 0-100
             int a = Random.Range(0,101);
             RandomSpawner.number = a;
-
+            //if item not spawned yet and number 50 do spawn item
             if (RandomSpawner.item == false && a == 50)
             {
 
                 RandomSpawner.item = true;
-
+                // determined position
                 pos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-
+                //spawning coin
                 Instantiate(cube, pos, Quaternion.identity);
                 cube = GameObject.FindWithTag("Coin");
                 cube.transform.eulerAngles = new Vector3(90,0,0);

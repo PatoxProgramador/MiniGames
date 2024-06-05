@@ -36,7 +36,9 @@ public class PlayerControler : MonoBehaviour
         if (transform.position.y < -5f)
         {
 
-            SceneManager.LoadScene("SampleScene");
+            //SceneManager.LoadScene("SampleScene");
+            //spawn point
+            gameObject.transform.position = new Vector3(-0.1f, 3f, 0f);
 
         }
 
@@ -44,14 +46,14 @@ public class PlayerControler : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        //movement
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
 
         rb.AddForce(xInput * speed, 0 , yInput * speed);
 
     }
-
+    //collect coin
     private void OnTriggerEnter(Collider other)
     {
 
@@ -61,7 +63,7 @@ public class PlayerControler : MonoBehaviour
             other.gameObject.SetActive(false);
 
             score++;
-
+            //win scenario
             if (score >= winScore)
             {
 
@@ -72,6 +74,7 @@ public class PlayerControler : MonoBehaviour
         }
 
     }
+    //death when touching anvil
     private void OnCollisionEnter(Collision collision)
     {
        
