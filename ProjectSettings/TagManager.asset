@@ -7,6 +7,8 @@ TagManager:
   - Coin
   - Floor
   - Anvil
+  - Exit
+  - Start
   layers:
   - Default
   - TransparentFX
