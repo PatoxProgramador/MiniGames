@@ -16,12 +16,18 @@ public class RandomSpawner : MonoBehaviour
     public static int number;
     public static bool item = false;
 
+    AudioSource sound;
+
     void Start()
     {
 
         number = 0;
+        sound = GetComponent<AudioSource>();
+        sound.volume = 0.1f;
 
         StartCoroutine(Spawner());
+
+        StartCoroutine(Hitting());
 
     }
 
@@ -46,6 +52,17 @@ public class RandomSpawner : MonoBehaviour
             Instantiate(cube, randomSpawnPosition, Quaternion.identity);
 
         }
+
+    }
+
+    private IEnumerator Hitting()
+    {
+
+        yield return new WaitForSeconds(0.3f);
+        //anvil hitting floor noise pattern
+        sound.Play();
+
+        StartCoroutine(Hitting());
 
     }
 }

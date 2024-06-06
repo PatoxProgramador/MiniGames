@@ -14,8 +14,6 @@ public class Anvil : MonoBehaviour
     void Start()
     {
 
-        
-        
     }
 
     // Update is called once per frame
@@ -31,7 +29,6 @@ public class Anvil : MonoBehaviour
         if (other.gameObject.tag == "Floor")
         {
 
-            Destroy(gameObject);
             //print(RandomSpawner.item);
             //random number being generated to pass to public variable between the chances of 0-100
             int a = Random.Range(0,101);
@@ -49,6 +46,8 @@ public class Anvil : MonoBehaviour
                 cube.transform.eulerAngles = new Vector3(90,0,0);
 
             }
+
+            Destroy(gameObject);
 
         }
 
