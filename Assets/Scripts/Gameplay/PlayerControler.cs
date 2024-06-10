@@ -14,6 +14,7 @@ public class PlayerControler : MonoBehaviour
     float yInput;
 
     AudioSource death;
+    public AudioClip []sounds = new AudioClip[2];
 
     int score;
     public int winScore;
@@ -60,7 +61,7 @@ public class PlayerControler : MonoBehaviour
     void RespawnPosition()
     {
 
-        death.Play();
+        death.PlayOneShot(sounds[0]);
         gameObject.transform.position = respawn.position;
 
     }
@@ -72,6 +73,7 @@ public class PlayerControler : MonoBehaviour
         {
 
             other.gameObject.SetActive(false);
+            death.PlayOneShot(sounds[1]);
 
             score++;
             //win scenario

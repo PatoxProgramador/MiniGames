@@ -1126,6 +1126,14 @@ PrefabInstance:
       propertyPath: winText
       value: 
       objectReference: {fileID: 1254995969}
+    - target: {fileID: 421933062265696643, guid: 5b9c9833c8bccdc4eb1f847320360a54, type: 3}
+      propertyPath: sounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5661c78ff8f1cef4cb6ec0bc6cce1c10, type: 3}
+    - target: {fileID: 421933062265696643, guid: 5b9c9833c8bccdc4eb1f847320360a54, type: 3}
+      propertyPath: sounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d3ffa05f7ec1164384fe5eb6fcc8f58, type: 3}
     - target: {fileID: 4868039336299717178, guid: 5b9c9833c8bccdc4eb1f847320360a54, type: 3}
       propertyPath: m_Name
       value: Player
