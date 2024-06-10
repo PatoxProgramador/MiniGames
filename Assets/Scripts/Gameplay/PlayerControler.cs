@@ -19,8 +19,6 @@ public class PlayerControler : MonoBehaviour
     int score;
     public int winScore;
 
-    public GameObject winText;
-
     public Transform respawn;
 
     void Start()
@@ -80,7 +78,7 @@ public class PlayerControler : MonoBehaviour
             if (score >= winScore)
             {
 
-                winText.SetActive(true);
+                SceneManager.LoadScene("EndScene");
 
             }
 

@@ -148,8 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  sounds:
+  - {fileID: 8300000, guid: 5661c78ff8f1cef4cb6ec0bc6cce1c10, type: 3}
+  - {fileID: 8300000, guid: 7d3ffa05f7ec1164384fe5eb6fcc8f58, type: 3}
   winScore: 1
-  winText: {fileID: 0}
   respawn: {fileID: 0}
 --- !u!82 &900148442703688699
 AudioSource:
