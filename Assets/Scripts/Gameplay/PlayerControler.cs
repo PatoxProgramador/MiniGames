@@ -13,6 +13,8 @@ public class PlayerControler : MonoBehaviour
     float xInput;
     float yInput;
 
+    AudioSource death;
+
     int score;
     public int winScore;
 
@@ -24,6 +26,7 @@ public class PlayerControler : MonoBehaviour
     {
         
         rb = GetComponent<Rigidbody>();
+        death = GetComponent<AudioSource>();
 
         score = 0;
 
@@ -38,7 +41,7 @@ public class PlayerControler : MonoBehaviour
 
             //SceneManager.LoadScene("SampleScene");
             //spawn point
-            gameObject.transform.position = new Vector3(-0.1f, 3f, 0f);
+            RespawnPosition();
 
         }
 
@@ -51,6 +54,14 @@ public class PlayerControler : MonoBehaviour
         yInput = Input.GetAxis("Vertical");
 
         rb.AddForce(xInput * speed, 0 , yInput * speed);
+
+    }
+
+    void RespawnPosition()
+    {
+
+        death.Play();
+        gameObject.transform.position = respawn.position;
 
     }
     //collect coin
@@ -81,7 +92,7 @@ public class PlayerControler : MonoBehaviour
         if(collision.gameObject.tag == "Anvil")
         {
 
-            transform.position = respawn.position;
+            RespawnPosition();
 
         }
 
