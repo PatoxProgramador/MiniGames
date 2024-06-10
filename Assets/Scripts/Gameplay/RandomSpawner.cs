@@ -58,7 +58,7 @@ public class RandomSpawner : MonoBehaviour
     private IEnumerator Hitting()
     {
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         //anvil hitting floor noise pattern
         sound.Play();
 

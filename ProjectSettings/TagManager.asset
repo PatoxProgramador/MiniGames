@@ -9,6 +9,7 @@ TagManager:
   - Anvil
   - Exit
   - Start
+  - GameMusic
   layers:
   - Default
   - TransparentFX

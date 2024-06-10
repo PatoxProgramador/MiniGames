@@ -8,10 +8,14 @@ public class ChangeScene : MonoBehaviour
     // Start is called before the first frame update
     AudioSource click;
 
+    public string sceneName;
+
     void Start()
     {
 
         click = GetComponent<AudioSource>();
+
+        DoNotDestroy.evaluator = sceneName;
 
     }
 
