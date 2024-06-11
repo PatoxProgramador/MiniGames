@@ -28,10 +28,15 @@ public class HeadsOrTails : MonoBehaviour
 
         if (fate)
         {
+            a = 0f;
+            changer.a = a;
+            screen[0].color = changer;
 
             fateText.text = "You Win";
             sound.PlayOneShot(skillIssue[0]);
             screen[0].sprite = background[0];
+
+            StartCoroutine(FadeIn(0, 0.1f));
 
         }
         else
@@ -41,7 +46,7 @@ public class HeadsOrTails : MonoBehaviour
             sound.PlayOneShot(skillIssue[1]);
             screen[0].sprite = background[1];
 
-            StartCoroutine(FadeIn());
+            StartCoroutine(FadeIn(1, 0.5f));
 
         }
 
@@ -55,19 +60,19 @@ public class HeadsOrTails : MonoBehaviour
         
     }
 
-    IEnumerator FadeIn()
+    IEnumerator FadeIn(int screener, float speed)
     {
 
         a += 0.2f;
         changer.a = a;
-        screen[1].color = changer;
+        screen[screener].color = changer;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(speed);
 
         if (changer.a < 1)
         {
 
-            StartCoroutine(FadeIn());
+            StartCoroutine(FadeIn(screener, speed));
 
         }
 

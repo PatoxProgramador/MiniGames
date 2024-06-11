@@ -506,11 +506,8 @@ MonoBehaviour:
   - {fileID: 1749218768}
   - {fileID: 1768668867}
   background:
+  - {fileID: 21300000, guid: c2e4aa97f382eed418b47588b2e500a1, type: 3}
   - {fileID: 21300000, guid: 8ff6f72581e0f19439035c8d6102aa5a, type: 3}
-  - {fileID: 21300000, guid: 8ff6f72581e0f19439035c8d6102aa5a, type: 3}
-  prop:
-  - {fileID: 21300000, guid: 8029f66fa7c57664eacd826adaebd8b6, type: 3}
-  - {fileID: 21300000, guid: 8029f66fa7c57664eacd826adaebd8b6, type: 3}
 --- !u!1 &986182754
 GameObject:
   m_ObjectHideFlags: 0
