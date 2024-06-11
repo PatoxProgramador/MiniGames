@@ -78,6 +78,7 @@ public class PlayerControler : MonoBehaviour
             if (score >= winScore)
             {
 
+                HeadsOrTails.fate = true;
                 SceneManager.LoadScene("EndScene");
 
             }
