@@ -13,7 +13,6 @@ public class HeadsOrTails : MonoBehaviour
 
     [SerializeField] Image[] screen = new Image[2];
     [SerializeField] Sprite []background = new Sprite[2];
-    [SerializeField] Sprite []prop = new Sprite[2];
 
     Color changer = Color.white;
     float a = 1f;
