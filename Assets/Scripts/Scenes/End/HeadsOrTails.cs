@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HeadsOrTails : MonoBehaviour
 {
 
     public static bool fate;
-    [SerializeField] Text fateText;
+    //[SerializeField] Text fateText;
+    [SerializeField] TextMeshProUGUI fateText;
     AudioSource sound;
     [SerializeField] AudioClip[] skillIssue = new AudioClip[2];
 
